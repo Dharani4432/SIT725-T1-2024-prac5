@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/controller');
 
-router.post('/cats', controller.createCat);
-router.get('/cats', controller.getAllCats);
+router.post('/techs', controller.createtech);
+router.get('/techs', controller.getAlltech);
 
 // Default route
 router.get('/', (req, res) => {

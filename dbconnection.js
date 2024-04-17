@@ -5,7 +5,7 @@ const connectDB = async () => {
     try {
         client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log("Connected to MongoDB");
-        const collection = client.db().collection('cat');
+        const collection = client.db().collection('tech');
         const count = await collection.countDocuments();
         if (count === 0) {
             await collection.insertMany([

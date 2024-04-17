@@ -6,7 +6,7 @@ const submitForm = () => {
     formData.description = $('#description').val();
 
     $.ajax({
-        url: '/api/cat',
+        url: '/api/tech',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(formData),
@@ -42,7 +42,7 @@ const addCardToPage = (cardData) => {
 
 const fetchAndDisplayCards = () => {
     $.ajax({
-        url: '/api/cat',
+        url: '/api/tech',
         method: 'GET',
         success: function(response) {
             const cards = response.data;
